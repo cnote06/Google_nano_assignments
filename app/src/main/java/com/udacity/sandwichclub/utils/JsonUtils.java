@@ -2,8 +2,6 @@ package com.udacity.sandwichclub.utils;
 
 import android.util.Log;
 
-import com.udacity.sandwichclub.model.Sandwich;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,7 +13,7 @@ import static android.content.ContentValues.TAG;
 
 public class JsonUtils {
 
-    public static Sandwich parseSandwichJson(String json) throws JSONException {
+    public static parseSandwichJson(String json) throws JSONException {
         int position = 0;
         int i = position;
 
@@ -34,10 +32,9 @@ public class JsonUtils {
 
                 Log.d(TAG, "Data download");
             }
-        } catch(JSONException jsone) {
-            jsone.printStackTrace();
-            Log.e(TAG, "error processing parseSandwichJson: " + jsone.getMessage());
-
+        } catch(JSONException json) {
+            json.printStackTrace();
+            Log.e(TAG, "error processing parseSandwichJson: " + json.getMessage());
         }
         return null;
     }
